@@ -1,38 +1,823 @@
 .App {
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styling untuk header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #3498db;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header h1 {
+  font-size: 28px;
+  color: white;
+  margin: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 10px 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #141516;
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    padding: 8px 10px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo-about {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.logo-abouthome {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.hero {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 60px 20px;
+  background-image: url('./images/background2.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-content {
+  width: 50%;
+  padding-left: 8%;
+  padding: 80px 2rem 0 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 100px;
+  color: white;
+  max-width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: white;
+  max-width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.hero .btn {
+  background-color: white;
+  color: #224081;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 50px;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.hero .btn:hover {
+  background-color:  #071118;  
+  color: white; 
+}
+
+.btn {
+  background-color: #3498db; 
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.5rem; 
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #071118; 
+}
+
+.hero-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* FITUR SECTION (dengan background polos) */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background-color: #f8f8f8; 
+  color: black;
+}
+
+.feature {
+  text-align: center;
+  width: 30%;
+}
+
+.feature img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.home {
+  background-color: #f8f8f8; 
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+  background-color: #2980b9; 
+  color: white;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 0.5 rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding: 40px 20px;
+}
+
+.feature {
+  text-align: center;
+  width: 30%;
+}
+
+.feature img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Section Rating atau Penilaian */
+.rating-section {
+  background-color: #ecf0f1; 
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.rating-section h2 {
+  font-size: 30px;
+  color: #2980b9; 
+}
+
+.rating-section p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.rating-text {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+.rating-bar {
+  width: 80%;
+  height: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.filled-bar {
+  height: 100%;
+  background-color: #2980b9; 
+  border-radius: 5px;
+}
+
+/* Styling halaman tentang */
+.about {
+  background-color: #f8f8f8;
+  padding: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.about-hero {
+  background-color: #1f5980;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.about-hero h1 {
+  font-size: 1.8 rem;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.about-info {
+  padding: 40px;
+  font-size: 1rem;
+  color: #333;
+  text-align: justify;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding: 40px 20px;
+}
+
+.stats-item {
+  text-align: center;
+  width: 30%;
+}
+
+.stats-item h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.stats-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.feature {
+  text-align: center;
+  width: 30%; 
+  padding: 20px; 
+}
+
+.feature img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Styling untuk footer */
+footer {
+  background-color: #1f5980; 
+  color: white; 
+  text-align: center; 
+  padding: 20px 0; 
+  font-size: 14px;
+  margin-top: 3.5rem;
+}
+
+footer .footer-content {
+  margin-bottom: 10px; 
+}
+
+footer .footer-content a {
+  color: #ecf0f1; 
+  text-decoration: none; 
+  font-weight: normal;
+}
+
+footer .footer-content a:hover {
+  text-decoration: underline; 
+}
+
+/* Mobile responsif untuk footer */
+@media (max-width: 768px) {
+  footer {
+    font-size: 12px; 
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.artikel-container {
+  padding: 2rem;
+  background-color: #f0f4f8;
+  margin-top: 1rem;
+}
+
+.artikel-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.1rem;
+}
+
+.artikel-description {
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-align: center;
+  color: #000000; 
+  margin-bottom: 2rem;
+}
+
+
+.artikel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.artikel-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column; 
+  height: 400px; 
+}
+
+.artikel-card:hover {
+  transform: translateY(-5px);
+}
+
+.artikel-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.artikel-content {
+  padding: 1rem;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.artikel-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.artikel-button {
+  background-color: #007bff;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: auto; 
+}
+
+.artikel-button:hover {
+  background-color: #141516;
+}
+
+
+/* Styling untuk artikel home */
+.articles {
+  background-color: #f5f5f5;
+  padding: 2rem 1rem;
+}
+
+.articles h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2px;
+}
+
+.article-card {
+  width: 300px;
+  margin: 3rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+.article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+.article-card h4 {
+  margin-top: 1rem;
+}
+
+.article-card p {
+  margin-top: 0.5rem;
+}
+
+
+
+/* Styling untuk button */
+.btn-articles-home {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.btn-articles-home:hover {
+  background-color: #071118;
+}
+
+.konsultasi-container {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+
+.konsultasi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.konsultasi-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: black;
+}
+
+.konsultasi-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.konsultasi-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+}
+
+.konsultasi-card p {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Responsive untuk mobile dan tablet */
+@media (max-width: 992px) {
+  .konsultasi-grid {
+    grid-template-columns: repeat(2, 1fr); 
   }
+}
+
+@media (max-width: 600px) {
+  .konsultasi-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+/* Styling untuk container Chat Dokter */
+.chat-dokter-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Styling untuk setiap bagian spesialisasi dokter */
+.specialization-section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff; 
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+
+/* Styling untuk judul spesialisasi */
+.specialization-section h3 {
+  background-color: #3498db; /* Biru gelap */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling untuk card dokter */
+.doctor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Styling untuk tiap card dokter */
+.doctor-card {
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling untuk gambar dokter */
+.doctor-img {
+  width: 180px;        
+  height: 180px;       
+  border-radius: 50%;  
+  margin: 0 auto 10px;
+  object-fit: cover;   
+}
+
+/* Styling nama dokter */
+.doctor-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #2c3e50; 
+}
+
+/* Styling deskripsi dokter */
+.doctor-card p {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #555; }
+
+/* Styling tombol untuk chat */
+.doctor-card button {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+  border-radius: 5px;
+}
+
+.doctor-card button:hover {
+  background-color: #0077cc;
+}
+
+/* Responsif untuk tampilan di bawah 768px (mobile) */
+@media (max-width: 768px) {
+  .doctor-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doctor-card {
+    width: 80%; 
+    margin-bottom: 20px;
+  }
+}
+
+/* Styling for the main container */
+.message-form-container {
+  width: 50%;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.message-form-container h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Input fields */
+.message-form-container input,
+.message-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Label for inputs */
+.message-form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Submit and Close Buttons */
+.message-form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.message-form-container button:hover {
+  background-color: #0056b3;
+}
+
+.message-form-container button[type="button"] {
+  background-color: #dc3545;
+  margin-top: 10px;
+}
+
+.message-form-container button[type="button"]:hover {
+  background-color: #c82333;
+}
+
+/* Ensure the form and elements are responsive */
+@media (max-width: 768px) {
+  .message-form-container {
+    width: 90%;
+  }
+}
+
+.success-message {
+  background-color: #28a745;
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 80px;
 }
